@@ -1,61 +1,80 @@
-# Extended Rule-based Chatbot
+# Customer Support + Friendly Chatbot
 def chatbot_response(user_input):
     user_input = user_input.lower()
 
-    # Define more rules and responses
+    # Greetings
     if "hello" in user_input or "hi" in user_input or "hey" in user_input:
-        return "Hello! How can I assist you today?"
+        return "Hello! Welcome to our customer support. How can I assist you today?"
 
     elif "how are you" in user_input:
         return "I'm doing great, thank you! How about you?"
 
-    elif "fine" in user_input or "good" in user_input or "great" in user_input:
-        return "Glad to hear that! How can I help you today?"
+    elif "fine" in user_input or "good" in user_input:
+        return "Glad to hear that! What can I help you with today?"
 
-    elif "what's your name" in user_input or "who are you" in user_input:
-        return "I am Venu Pasala, your friendly rule-based chatbot."
+    # Product Information
+    elif "product" in user_input or "item" in user_input:
+        return "Could you please specify which product you're asking about? I can give details, price, and availability."
 
-    elif "bye" in user_input or "goodbye" in user_input or "see you" in user_input:
-        return "Goodbye! Take care and have a wonderful day!"
+    elif "price" in user_input:
+        return "Please tell me the product name so I can share the price."
 
-    elif "what can you do" in user_input or "help" in user_input:
-        return "I can chat with you, answer simple questions, and keep you company!"
+    elif "available" in user_input or "in stock" in user_input:
+        return "Let me know the product name and I’ll check its availability."
 
-    elif "time" in user_input:
-        from datetime import datetime
-        return f"The current time is {datetime.now().strftime('%H:%M:%S')}."
+    # Order Support
+    elif "order status" in user_input or "track my order" in user_input:
+        return "Sure! Please provide your order ID so I can check the status."
 
-    elif "date" in user_input or "day" in user_input:
-        from datetime import datetime
-        return f"Today is {datetime.now().strftime('%A, %B %d, %Y')}."
+    elif "cancel order" in user_input:
+        return "I can help with that. Please share your order ID to proceed."
 
-    elif "weather" in user_input:
-        return "I can't check live weather yet, but I can chat with you about sunny or rainy days!"
+    elif "return" in user_input or "refund" in user_input:
+        return "Our return policy allows returns within 30 days of delivery. Please provide your order ID to start the process."
 
+    # Billing & Payment
+    elif "payment" in user_input or "billing" in user_input:
+        return "Are you asking about payment methods or an issue with a recent payment?"
+
+    elif "payment methods" in user_input:
+        return "We accept credit cards, debit cards, PayPal, and net banking."
+
+    elif "invoice" in user_input or "bill" in user_input:
+        return "Please share your order ID and I can send your invoice."
+
+    # Technical Support
+    elif "issue" in user_input or "problem" in user_input or "error" in user_input:
+        return "I’m sorry you’re facing this issue. Could you describe the problem in detail so I can help?"
+
+    elif "app not working" in user_input:
+        return "Please try restarting the app and checking your internet connection. If the problem persists, I’ll connect you to a technician."
+
+    # Company Info
+    elif "store hours" in user_input or "timings" in user_input:
+        return "Our store is open from 9 AM to 9 PM, Monday to Saturday."
+
+    elif "contact" in user_input or "phone number" in user_input:
+        return "You can reach our customer support at +1-800-123-4567."
+
+    elif "email" in user_input:
+        return "You can email us at support@example.com."
+
+    # Fun/Personal
     elif "joke" in user_input:
         return "Why don’t skeletons fight each other? They don’t have the guts!"
 
-    elif "your creator" in user_input or "who made you" in user_input:
-        return "I was created by Venu Pasala for friendly conversations."
+    elif "thank you" in user_input or "thanks" in user_input:
+        return "You’re welcome! Happy to help."
 
-    elif "favorite color" in user_input:
-        return "I love blue — it reminds me of the clear sky!"
-
-    elif "favorite food" in user_input:
-        return "I don’t eat, but if I could, I’d try pizza first!"
-
-    elif "where are you from" in user_input:
-        return "I live inside your computer, always ready to chat!"
-
-    elif "openai" in user_input:
-        return "OpenAI is an AI research lab that created ChatGPT — I’m inspired by it!"
+    elif "bye" in user_input or "goodbye" in user_input or "see you" in user_input:
+        return "Goodbye! Thank you for visiting us."
 
     else:
-        return "I'm not sure I understand. Can you try asking in a different way?"
+        return "I'm not sure I understand. Could you rephrase or give more details?"
 
-# Main loop for user interaction
+# Main loop
 def main():
-    print("Chatbot: Hi! I am Venu Pasala, your friendly chatbot. How can I assist you today?")
+    print("Chatbot: Hi! I am Venu Pasala, your friendly customer support chatbot. How can I help you today?")
 
     while True:
         user_input = input("You: ")

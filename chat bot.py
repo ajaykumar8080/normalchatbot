@@ -22,6 +22,11 @@ def chatbot_response(user_input):
     elif "available" in user_input or "in stock" in user_input:
         return "Let me know the product name and I’ll check its availability."
 
+    elif "" in user_input or "in stock" in user_input:
+        return ""
+         
+    elif "contact" in user_input or "in stock" in user_input:
+        return "call for 8088474666."
     # Order Support
     elif "order status" in user_input or "track my order" in user_input:
         return "Sure! Please provide your order ID so I can check the status."

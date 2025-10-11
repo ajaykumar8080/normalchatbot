@@ -24,6 +24,23 @@ def chatbot_response(user_input):
 
     elif "phone" in user_input or "in stock" in user_input:
         return "8088474669"
+        elif "price" in user_input:
+        return "Please tell me the product name so I can share the price."
+
+    elif "available" in user_input or "in stock" in user_input:
+        return "Let me know the product name and I’ll check its availability."
+
+    elif "phone" in user_input or "in stock" in user_input:
+        return "8088474669"
+            elif "price" in user_input:
+        return "Please tell me the product name so I can share the price."
+
+    elif "available" in user_input or "in stock" in user_input:
+        return "Let me know the product name and I’ll check its availability."
+
+    elif "phone" in user_input or "in stock" in user_input:
+        return "8088474669"
+            
          
     elif "contact" in user_input or "in stock" in user_input:
         return "call for 8088474669."

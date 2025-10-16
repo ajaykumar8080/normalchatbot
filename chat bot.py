@@ -74,7 +74,9 @@ def chatbot_response(user_input):
     # Company Info
     elif "store hours" in user_input or "timings" in user_input:
         return "Our store is open from 9 AM to 9 PM, Monday to Saturday."
-
+    # Company Info
+    elif "store hours" in user_input or "timings" in user_input:
+        return "Our store is open from 9 AM to 9 PM, Monday to Saturday."
     elif "contact" in user_input or "phone number" in user_input:
         return "You can reach our customer support at +1-800-123-4567."
 
